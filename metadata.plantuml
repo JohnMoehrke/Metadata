@@ -1,0 +1,115 @@
+@startuml
+
+struct Reference {
+    id : string[1..0] (id, identifier, link, etc)
+}
+
+struct Identifier { 
+    assigningAuthority : String[0..1]
+    value : String[1..1]
+}
+
+abstract class Metadata {
+  whoFrom : Reference[0..*] <<User, Organization, Subject>> 
+  whoSubject : Reference[0..1] <<Subject>>
+  thisData : Reference[0..*] <<Data>> - points at the data subset covered by this Metadata
+  fromData : Entity[0..*] - used when thisData are derived or transformed from predicate data
+  whereFrom : Reference[0..*] <<Location>> - local where data was captured
+  whenCollected : dateTime|period[0..*] - when was the data captured
+  howCollected : How[0..*] - methods used to capture or create the data
+  authorization : Reference[0..*] <<Policy, Consent>> - authorizations available for this data
+  signature : Signature[0..1] - signature on thisData
+}
+Metadata -down-> Who : [0..*] whoFrom
+Metadata *-down- How : [0..*] howCollected
+Metadata -down-> Subject : [0..*] whoSubject
+Metadata *-down- Entity : [0..*] fromData
+Policy -down-* Consent : [0..*] authorization
+Metadata -down-> Policy : [0..*] authorization
+Metadata -down-> Location : [0..1] whereFrom
+
+abstract class Who {
+    identity : Reference[0..*] (Organization, User, Subject)
+    activity : concept[0..*] (created, updated, transformed, maintain, subject)
+}
+Who -> User : [0..*]
+Who -> Organization : [0..*]
+Who -> Subject : [0..*]
+
+abstract class User {
+    identifier : Identifer[0..*]
+    name : HumanName[0..*]
+    telephone : String[0..*]
+    email : String[0..*]
+    birthDate : dateTime[0..*]
+    address : PostalAddress[0..*]
+}
+
+abstract class Subject {
+    identifier : Identifer[0..*]
+    name : HumanName[0..*]
+    telephone : String[0..*]
+    email : String[0..*]
+    birthDate : dateTime[0..*]
+    address : PostalAddress[0..*]
+}
+Subject -> User : [0..*]
+
+abstract class Organization {
+    identifier : Identifier[0..*]
+    type : String[0..*]
+    name : String[0..1]
+    description : String[0..1]
+    contact : String[0..*]
+    partOf : Reference[0..1] <<Organization>>
+    location : Location[0..*]
+}
+Organization <-down- Location : [0..*]
+
+abstract class Location {
+    identifier : Identifier[0..*]
+    name : String[0..1]
+    description : String[0..1]
+    address : PostalAddress[0..*]
+    manager : Reference[0..1] <<Organization>>
+}
+
+
+abstract class Entity {
+    howUsed : String[1..1] (revision, quotation, source, removal)
+    what : Reference[1..*] <<Any>>
+}
+
+abstract class How {
+    collectionMethod : String[0..1] <<survey, questionnaire, synthetic>>
+    precision : String[0..1] <<how precise is the data>>
+}
+
+abstract class Policy {
+    identifier : Identifer[0..*] - any business identifiers cross-reference
+    status : boolean[0..1] - indication that this is active or expired/revoked
+    category : String[0..*] - indication of the basis/regulation upon which the authorization is given
+    dateGiven : DateTime[0..1] - date this authorization was captured
+    periodValid : Period[0..1] - period of time this authorization is valid
+    allowedUses : String[0..*] - purposes for which this authorizes access
+    grantee : Reference[0..*] <<Organization, User>> - who gives authorization
+    grantor : Reference[0..*] <<Organization, User>> - to whom is authorization given
+    persistance : String[0..*] <<encrypted, de-identified>> - requirements on persistance
+    regionLocked : Location[0..*] - regions for which this data are restricted to
+    useObligations : String[0..*] <<must be aggregated, must be de-identified, must be individually authorized, etc>>
+}
+
+abstract class Consent {
+ all of Policy plus
+    --------------
+    subject : Subject[0..1] - subject of the data
+    policyText : String[0..1] - the legal consent terms 
+    permit : boolean[0..1] - permit or deny. Used to revoke
+    data : Reference[0..*] <<Any>> - all the data covered. if empty, then all data about the subject
+}
+
+Consent -down-> Organization : [0..*] grantee, grantor
+Consent -down-> User : [0..*] grantee, grantor
+Consent -down-> Subject : [0..*] subject
+
+@enduml
