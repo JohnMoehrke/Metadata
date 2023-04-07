@@ -1,0 +1,81 @@
+@startuml 
+title Simplified Data Provenance and Trust Metadata
+
+abstract class Signature {
+    whoSigned : String[1..*]
+    whySigned : String[0..*]
+    whenSigned : dateTime[1..*]
+    howSigned : String[1..1] 
+    signature : String[1..1] 
+}
+entity Data
+
+abstract class Metadata {
+  whoFrom : Who[0..*] <<User, Organization, Subject>> 
+  whoSubject : Subject[0..*] - Subject of the data
+  thisData : Reference[1..*] <<Data>> - points at the data subset covered by this Metadata
+  fromData : Entity[0..*] - used when thisData are derived or transformed from predicate data
+  whereFrom : Location[0..*] - local where data was captured
+  whenCollected : dateTime|period[0..*] - when was the data captured
+  howCollected : How[0..*] - methods used to capture or create the data
+  authorization : Reference[0..*] <<Policy, Consent>> - authorizations available for this data
+  signature : Signature[0..*] - signature on thisData and metadata
+}
+Metadata *-down- Entity 
+Metadata *-down- Who 
+Metadata *-down- Subject 
+Metadata *-down- How 
+Metadata *-right- Signature
+Metadata -left-> Data
+
+abstract class Who {
+    identity : Reference[0..*] <<Organization, User, Subject>>
+    activity : concept[0..*] <<created, updated, transformed, maintain, subject>>
+}
+
+abstract class Subject {
+    identifier : Identifer[0..*]
+    name : HumanName[0..*]
+    telephone : String[0..*]
+    email : String[0..*]
+    birthDate : dateTime[0..*]
+    address : PostalAddress[0..*]
+}
+
+abstract class Entity {
+    howUsed : String[1..1] <<revision, quotation, source, removal>>
+    what : Reference[1..*] <<Any>>
+}
+
+abstract class How {
+    collectionMethod : String[0..1] <<survey, questionnaire, synthetic>>
+    precision : String[0..1] <<how precise is the data>>
+    etc...
+}
+
+abstract class Policy {
+    identifier : Identifer[0..*] - any business identifiers cross-reference
+    status : boolean[0..1] - indication that this is active or expired/revoked
+    category : String[0..*] - indication of the basis/regulation upon which the authorization is given
+    dateGiven : DateTime[0..1] - date this authorization was captured
+    periodValid : Period[0..1] - period of time this authorization is valid
+    allowedUses : String[0..*] - purposes for which this authorizes access
+    grantee : Reference[0..*] <<Organization, User>> - who gives authorization
+    grantor : Reference[0..*] <<Organization, User>> - to whom is authorization given
+    persistance : String[0..*] <<encrypted, de-identified>> - requirements on persistance
+    regionLocked : Location[0..*] - regions for which this data are restricted to
+    useObligations : String[0..*] <<must be aggregated, must be de-identified, must be individually authorized, etc>>
+}
+Policy -down-* Consent : [0..*] individual authorization
+
+abstract class Consent {
+ all of Policy plus
+    --------------
+    subject : Subject[0..1] - subject of the data
+    policyText : String[0..1] - the legal consent terms 
+    policyLanguage : String[0..1] - the human language the consent was given in
+    permit : boolean[0..1] - permit or deny. Used to revoke
+    data : Reference[0..*] <<Any>> - all the data covered. if empty, then all data about the subject
+}
+
+@enduml
