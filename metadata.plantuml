@@ -20,13 +20,14 @@ abstract class Signature {
 entity Data
 
 abstract class Metadata {
-  whoFrom : Who[0..*] <<User, Organization, Subject>> 
-  whoSubject : Subject[0..*] - Subject of the data
+  whoFrom : Who[0..*] <<User, Organization, Subject>> The user or organizaion sending you or captured this data.
+  whoSubject : Subject[0..*] - Who is this data about
   thisData : Reference[1..*] <<Data>> - points at the data subset covered by this Metadata
   fromData : Entity[0..*] - used when thisData are derived or transformed from predicate data
   whereFrom : Location[0..*] - local where data was captured
   whenCollected : dateTime|period[0..*] - when was the data captured
   howCollected : How[0..*] - methods used to capture or create the data
+  classifiers : String[0..*] <<sensitive, individual, business, quality, etc>> 
   authorization : Reference[0..*] <<Policy, Consent>> - authorizations available for this data
   signature : Signature[0..*] - signature on thisData and metadata
 }
@@ -102,6 +103,7 @@ abstract class Policy {
     identifier : Identifer[0..*] - any business identifiers cross-reference
     status : boolean[0..1] - indication that this is active or expired/revoked
     category : String[0..*] - indication of the basis/regulation upon which the authorization is given
+    classifiers : String[0..*] <<sensitive, individual, business, quality, etc>> 
     dateGiven : DateTime[0..1] - date this authorization was captured
     periodValid : Period[0..1] - period of time this authorization is valid
     allowedUses : String[0..*] - purposes for which this authorizes access
