@@ -1,0 +1,14 @@
+<metadata>
+    <whoFrom>
+      <value value="Acme Data Collector"/>
+    </whoFrom>
+    <whereFrom>
+        <value value="US"/>
+        <value value="CA"/>
+        <value value="MX"/>
+    </whereFrom>
+    <whenCollected value="2023-01-01"/>
+    <howCollected value="web poll sent by email, self reported"/>
+    <biasEthics value="none"/>
+    <intellectualProperty value="Copyright Acme Data Collector"/>
+</metadata>

@@ -1,0 +1,34 @@
+@startuml 
+title June Data Provenance
+
+abstract class Metadata {
+  whoFrom : String[0..*] <<User, Organization, Subject>> The user or organizaion sending you or captured this data.
+  fromData : Entity[0..*] - used when thisData are derived or transformed from predicate data
+  whereFrom : Location[0..*] - local where data was captured, usually zip or country code
+  whenCollected : dateTime|period[0..*] - when was the data captured
+  howCollected : String[0..*] - methods used to capture or create the data
+  biasEthics : String[0..*] - Bias and Ethical considerations
+  intellectualProperty : String[0..*] - <<copyrigth, license, etc>> Intellectual property rights
+  usage : String[0..*] - usage other than consent rights
+  whoSubject : Subject[0..*] - Who is this data about
+}
+Metadata *-down- Entity 
+Metadata *-down- Subject 
+Metadata -left-> Data
+
+abstract class Subject {
+    identifier : String[0..*]
+    name : String[0..*]
+    telephone : String[0..*]
+    email : String[0..*]
+    birthDate : dateTime[0..*]
+    address : PostalAddress[0..*]
+    consent : String[0..*] 
+}
+
+abstract class Entity {
+    howUsed : String[1..1] <<revision, quotation, source, removal>>
+    what : Reference[1..*] <<Any>>
+}
+
+@enduml
