@@ -2,9 +2,9 @@
 title June Data Provenance
 
 abstract class Metadata {
-  whoFrom : String[0..*] <<User, Organization, Subject>> The user or organizaion sending you or captured this data.
-  fromData : Entity[0..*] - used when thisData are derived or transformed from predicate data
-  whereFrom : Location[0..*] - local where data was captured, usually zip or country code
+  agent : String[0..*] <<User, Organization, Software>> The user or organizaion sending you or captured this data.
+  entity : Entity[0..*] - used when thisData are derived or transformed from predicate data
+  location : String[0..*] - local where data was captured, usually zip or country code
   whenCollected : dateTime|period[0..*] - when was the data captured
   howCollected : String[0..*] - methods used to capture or create the data
   biasEthics : String[0..*] - Bias and Ethical considerations
@@ -23,7 +23,9 @@ abstract class Subject {
     email : String[0..*]
     birthDate : dateTime[0..*]
     address : PostalAddress[0..*]
-    consent : String[0..*] 
+    consent : String[0..1] 
+    whenConsented : dateTime[0..1]
+    consentFramework : String[0..*]
 }
 
 abstract class Entity {

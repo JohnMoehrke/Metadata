@@ -1,12 +1,12 @@
 <metadata>
-    <whoFrom>
+    <agent>
       <value value="Acme Data Collector"/>
-    </whoFrom>
-    <whereFrom>
+    </agent>
+    <location>
         <value value="US"/>
         <value value="CA"/>
         <value value="MX"/>
-    </whereFrom>
+    </location>
     <whenCollected value="2023-01-01"/>
     <howCollected value="web poll sent by email, self reported"/>
     <biasEthics value="none"/>

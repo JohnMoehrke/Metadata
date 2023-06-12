@@ -1,0 +1,64 @@
+@startuml 
+title Extending W3C Prov 
+
+
+package Metadata <<Frame>>{
+    Agent "0..*" - "0..*" Entity 
+    (Agent, Entity) .. Activity
+
+
+abstract class Agent {
+    person, organization, software, device
+    --
+    id : String1..1 - used to link
+    label : String[0..*] - what is the agent
+    location : String[0..*] - location of the agent
+    type : String[0..*] - what kind of agent
+}
+
+abstract class Entity {
+    physical, digital, conceptual or other kind of thing
+    --
+    id : String[1..1] - used to link
+    label : String[0..*] - how this entity is known
+    location : String[0..*] - location of entity
+    type : String[0..1] - type of entity
+}
+
+abstract class Activity {
+    something that occurs over a period of time and acts upon
+     or with entities; it may include consuming, processing, transforming, 
+     modifying, relocating, using, or generating entities.
+    --
+    id : String[1..1] - used to link
+    startTime : xs:dateTime[0..1]
+    endTime : xs:dateTime[0..1]
+    label : String[0..*] - description of activity
+    location : String[0..*] - location of activity
+    type : String[0..*] - type of activity <<generation, usage, communication, invalidation, derivation, revision, quotation, primarySource>>
+}
+
+}
+
+Entity <|- Subject
+Activity <|- Consent
+
+abstract class Subject <<Entity>> {
+    identifier : String[0..*]
+    name : String[0..*]
+    telephone : String[0..*]
+    email : String[0..*]
+    birthDate : dateTime[0..*]
+    address : PostalAddress[0..*]
+}
+
+abstract class Consent <<Activity>> {
+    id : String[1..1] - used to link
+    label : String [0..*] - title
+    location : String[0..*] - where
+    terms : String[0..*]
+    dateSigned : String[1..1]
+    startTime : xs:dateTime[0..1]
+    endTime : xs:dateTime[0..1]
+}
+@enduml
