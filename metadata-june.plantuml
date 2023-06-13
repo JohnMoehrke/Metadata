@@ -6,27 +6,15 @@ abstract class Metadata {
   entity : Entity[0..*] - used when thisData are derived or transformed from predicate data
   location : String[0..*] - local where data was captured, usually zip or country code
   whenCollected : dateTime|period[0..*] - when was the data captured
-  howCollected : String[0..*] - methods used to capture or create the data
+  howCollected : String[0..*] - <<Web Scraping, Feeds, Syndication, Data Mining, Machine Generated/MLOps, Sensor/IoT, Social Media, Crowdsourcing, User Generated>>
+  consentFramework : String[0..*] <<General opt in, specific purpose, Communication Channel, third-party data sharing, Cookie, Sensitive Data, Automated decision making.>>
+  privacyRights : String[0..*] <<right to be informed, right to access, right to object, right to restrict processing, right to erasure or blocking, right to rectification, right to data portability, right to file a complaint, right to damages>>
   biasEthics : String[0..*] - Bias and Ethical considerations
-  intellectualProperty : String[0..*] - <<copyrigth, license, etc>> Intellectual property rights
+  intellectualProperty : String[0..*] - <<copyrigth, trademark, patent, trade secret, industrial design rights, geographical indications, license>>
   usage : String[0..*] - usage other than consent rights
-  whoSubject : Subject[0..*] - Who is this data about
 }
 Metadata *-down- Entity 
-Metadata *-down- Subject 
 Metadata -left-> Data
-
-abstract class Subject {
-    identifier : String[0..*]
-    name : String[0..*]
-    telephone : String[0..*]
-    email : String[0..*]
-    birthDate : dateTime[0..*]
-    address : PostalAddress[0..*]
-    consent : String[0..1] 
-    whenConsented : dateTime[0..1]
-    consentFramework : String[0..*]
-}
 
 abstract class Entity {
     howUsed : String[1..1] <<revision, quotation, source, removal>>

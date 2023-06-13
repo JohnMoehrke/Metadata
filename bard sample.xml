@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prov:document xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/ns/prov# http://www.w3.org/TR/prov-xml/prov-xml.xsd">
+  <prov:activity id="act1">
+    <prov:label>Collect data</prov:label>
+    <prov:used prov:entity="ent1"/>
+  </prov:activity>
+  <prov:entity id="ent1">
+    <prov:label>Dataset</prov:label>
+    <prov:location>https://www.kaggle.com/datasets/...</prov:location>
+  </prov:entity>
+  <prov:activity id="act2">
+    <prov:label>Clean data</prov:label>
+    <prov:used prov:entity="ent1"/>
+    <prov:wasGeneratedBy prov:entity="ent2"/>
+  </prov:activity>
+  <prov:entity id="ent2">
+    <prov:label>Cleaned dataset</prov:label>
+  </prov:entity>
+  <prov:activity id="act3">
+    <prov:label>Transform data</prov:label>
+    <prov:used prov:entity="ent2"/>
+    <prov:wasGeneratedBy prov:entity="ent3"/>
+  </prov:activity>
+  <prov:entity id="ent3">
+    <prov:label>Transformed dataset</prov:label>
+  </prov:entity>
+  <prov:activity id="act4">
+    <prov:label>Train model</prov:label>
+    <prov:used prov:entity="ent3"/>
+    <prov:wasGeneratedBy prov:entity="ent4"/>
+  </prov:activity>
+  <prov:entity id="ent4">
+    <prov:label>Trained model</prov:label>
+  </prov:entity>
+  <prov:activity id="act5">
+    <prov:label>Evaluate model</prov:label>
+    <prov:used prov:entity="ent4"/>
+    <prov:wasGeneratedBy prov:entity="ent5"/>
+  </prov:activity>
+  <prov:entity id="ent5">
+    <prov:label>Evaluation results</prov:label>
+    <prov:value>90%</prov:value>
+  </prov:entity>
+  <prov:activity id="act6">
+    <prov:label>Deploy model</prov:label>
+    <prov:used prov:entity="ent4"/>
+  </prov:activity>
+  <prov:wasDerivedFrom prov:entity="ent2" prov:activity="act1"/>
+  <prov:wasDerivedFrom prov:entity="ent3" prov:activity="act2"/>
+  <prov:wasDerivedFrom prov:entity="ent4" prov:activity="act3"/>
+  <prov:wasDerivedFrom prov:entity="ent5" prov:activity="act4"/>
+  <prov:wasGeneratedBy prov:entity="ent2" prov:activity="act2"/>
+  <prov:wasGeneratedBy prov:entity="ent3" prov:activity="act3"/>
+  <prov:wasGeneratedBy prov:entity="ent4" prov:activity="act4"/>
+  <prov:wasGeneratedBy prov:entity="ent5" prov:activity="act5"/>
+  <prov:used prov:activity="act1" prov:entity="ent1"/>
+  <prov:used prov:activity="act2" prov:entity="ent1"/>
+  <prov:used prov:activity="act3" prov:entity="ent2"/>
+  <prov:used prov:activity="act4" prov:entity="ent3"/>
+  <prov:used prov:activity="act5" prov:entity="ent4"/>
+</prov:document>

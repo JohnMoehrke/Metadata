@@ -1,0 +1,27 @@
+<metadata>
+    <agent>
+      <value value="Cal Poly"/>
+    </agent>
+    <location>
+        <value value="US"/>
+        <value value="CA"/>
+        <value value="MX"/>
+    </location>
+    <whenCollected value="2023-06-12"/>
+    <howCollected value="extraction from EHR"/>
+    <consentFramework value="General opt in"/>
+    <privacyRights>
+        <value value="right to be informed"/>
+        <value value="right to object"/>
+        <value value="right to restrict processing"/>
+        <value value="right to erasure or blocking"/>
+        <value value="right to damages"/>
+    </privacyRights>
+    <biasEthics value="Personal Health Information"/>
+    <intellectualProperty>
+        <value value="Copyright Cal Poly"/>
+        <value value="Trademark Disney"/>
+        <value value="Not to be used outside the USA"/>
+        <value value="All data has consent on file"/>
+    </intellectualProperty>
+</metadata>

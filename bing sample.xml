@@ -1,0 +1,36 @@
+<prov:document xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/ns/prov# http://www.w3.org/ns/prov.xsd">
+<!-- The dataset entity -->
+<prov:entity prov:id="ex:dataset">
+<prov:type>prov:Collection</prov:type>
+<prov:label>Machine learning dataset</prov:label>
+<prov:value>...</prov:value>
+</prov:entity>
+<!-- The activity that generated the dataset -->
+<prov:activity prov:id="ex:generateDataset">
+<prov:type>ex:DataGeneration</prov:type>
+<prov:label>Generate dataset for machine learning</prov:label>
+<prov:startTime>2023-06-12T18:00:00Z</prov:startTime>
+<prov:endTime>2023-06-12T18:30:00Z</prov:endTime>
+</prov:activity>
+<!-- The agent that performed the activity -->
+<prov:agent prov:id="ex:dataScientist">
+<prov:type>prov:Person</prov:type>
+<prov:label>Data scientist</prov:label>
+</prov:agent>
+<!-- The association between the activity and the agent -->
+<prov:wasAssociatedWith prov:activity="ex:generateDataset" prov:agent="ex:dataScientist"/>
+<!-- The generation relation between the entity and the activity -->
+<prov:wasGeneratedBy prov:entity="ex:dataset" prov:activity="ex:generateDataset" prov:time="2023-06-12T18:30:00Z"/>
+<!-- The sources of the dataset -->
+<prov:entity prov:id="ex:data1">
+<prov:type>ex:DataSource</prov:type>
+<prov:value>...</prov:value>
+</prov:entity>
+<prov:entity prov:id="ex:data2">
+<prov:type>ex:DataSource</prov:type>
+<prov:value>...</prov:value>
+</prov:entity>
+<!-- The derivation relations between the dataset and the sources -->
+<prov:wasDerivedFrom prov:generatedEntity="ex:dataset" prov:usedEntity="ex:data1"/>
+<prov:wasDerivedFrom prov:generatedEntity="ex:dataset" prov:usedEntity="ex:data2"/>
+</prov:document>
