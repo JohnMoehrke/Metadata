@@ -1,27 +1,38 @@
 <metadata>
-    <agent>
-      <value value="Cal Poly"/>
-    </agent>
-    <location>
-        <value value="US"/>
-        <value value="CA"/>
-        <value value="MX"/>
-    </location>
-    <whenCollected value="2023-06-12"/>
-    <howCollected value="extraction from EHR"/>
-    <consentFramework value="General opt in"/>
-    <privacyRights>
-        <value value="right to be informed"/>
-        <value value="right to object"/>
-        <value value="right to restrict processing"/>
-        <value value="right to erasure or blocking"/>
-        <value value="right to damages"/>
-    </privacyRights>
-    <biasEthics value="Personal Health Information"/>
     <intellectualProperty>
-        <value value="Copyright Cal Poly"/>
-        <value value="Trademark Disney"/>
-        <value value="Not to be used outside the USA"/>
-        <value value="All data has consent on file"/>
+        <value value="no copyrigths"/>
+        <value value="Protected health information (PHI)"/>
+        <value value="Personnally identifiable information (PII)"/>
     </intellectualProperty>
+    <usage>
+        <value value="Specifically negotiated license rights"/>
+        <value value="12 months usage on data"/>
+        <value value="No derivative works allowed"/>
+        <value value="Onward anonymization required for data sharing"/>
+        <value value="Data hosting location is CA"/>
+    </usage>
+    <biasEthics>
+        <value value="Age distribution: 0 - 14 years: 18.2%; 15 - 24 years: 13.0%; 25 - 54 years: 39.0%; 55 - 64 years: 12.9%; 65 years and over: 16.8%"/>
+        <value value="Gender distribution: 45% male, 52% female, and 3% no gender"/>
+        <value value="Ethnic distribution: 27% Hispanic/Latino, 60% White, 2% Black, 4% American Indian/Alaska Native, 3% other or multiple race/ethnicity, 3% race/ethnicity non-disclosure"/>
+    </biasEthics>
+    <location>
+        <GPS lat="40.8665" lon="124.0828"/>
+    </location>
+    <agent>
+      <value value="Cal Policy Humboldt"/>
+      <value value="North Country Clinic"/>
+      <value value="United Indian Health Services"/>
+    </agent>
+    <entity value="https://www.example.com/page1?param1=value1&param2=value2"/>
+    <whenCollected value="2023-02-03T12:13:21"/>
+    <generationMethod>
+        <value value="User generated"/>
+        <value value="Primary user source survey, interviews"/>
+        <value value="Machine generated/MLOps"/>
+    </generationMethod>
+    <consentFramework>
+        <value value="Specific-purpose"/>
+        <value value="Sensitive data"/>
+    </consentFramework>
 </metadata>

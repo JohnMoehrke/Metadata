@@ -1,0 +1,36 @@
+<metadata>
+    <intellectualProperty value="None"/>
+    <usage>
+        <value value="No data ownership and use claims"/>
+        <value value="All use rights to treatment of original, derived and usage data"/>
+        <value value="No copyright or requirements for derivative works"/>
+        <value value="Anonymized data"/>
+    </usage>
+    <biasEthics>
+        <value value="Gender distribution around: 64% male, 36% female"/>
+        <value value="Equal geographic representation in CA, OR, and WA states"/>
+        <value value="Equal racial representation across all groups"/>
+    </biasEthics>
+    <location>
+        <value value="EPSG:2225: NAD83"/>
+        <value value="SR-ORG:6631"/>
+        <value value="ESRI:102349: NAD 1983"/>
+    </location>
+    <agent value="Any name but not Cal Poly Humboldt"/>
+    <entity value="Any"/>
+    <whenCollected>
+        <startTime value="2022-01-01T00:00:01"/>
+        <stopTime value="2023-06-16T23:23:59"/>
+    </whenCollected>
+    <generationMethod>
+        <value value="Data mining"/>
+        <value value="Social media"/>
+        <value value="Crowdsourcing"/>
+        <value value="User generated"/>
+        <value value="Primary user source (survey, interview)"/>
+    </generationMethod>
+    <consentFramework>
+        <value value="General opt-in"/>
+        <value value="Anonymized health data "/>
+    </consentFramework>
+</metadata>

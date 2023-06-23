@@ -40,25 +40,5 @@ abstract class Activity {
 
 }
 
-Entity <|- Subject
-Activity <|- Consent
 
-abstract class Subject <<Entity>> {
-    identifier : String[0..*]
-    name : String[0..*]
-    telephone : String[0..*]
-    email : String[0..*]
-    birthDate : dateTime[0..*]
-    address : PostalAddress[0..*]
-}
-
-abstract class Consent <<Activity>> {
-    id : String[1..1] - used to link
-    label : String [0..*] - title
-    location : String[0..*] - where
-    terms : String[0..*]
-    dateSigned : String[1..1]
-    startTime : xs:dateTime[0..1]
-    endTime : xs:dateTime[0..1]
-}
 @enduml

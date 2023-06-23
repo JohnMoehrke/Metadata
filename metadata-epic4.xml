@@ -1,0 +1,133 @@
+<metadata>
+    <intellectualProperty>
+        <value value="Patents"/>
+        <value value="Domain names"/>
+        <value value="Confidential information"/>
+        <value value="Works of authorship"/>
+        <value value="Service marks"/>
+        <value value="Design rights"/>
+        <value value="Commercial secrets"/>
+    </intellectualProperty>
+    <usage>
+        <value value="HPI, sensitive treatment, onward anonymization, no time constraints on usage, all right relayed"/>
+    </usage>
+    <biasEthics>
+        <value value="Gender range: 32% female, 62% male, 6% unidentified"/>
+        <value value="PHP demographic: 67% MD, 13% APRN, 20% unknown"/>
+    </biasEthics>
+    <location>
+        <postalCode value="10115"/>
+        <postalCode value="10117"/>
+        <postalCode value="35004"/>
+        <postalCode value="71601"/>
+        <postalCode value="75502"/>
+        <postalCode value="85001"/>
+        <postalCode value="90001"/>
+        <postalCode value="80001"/>
+        <postalCode value="60010"/>
+        <postalCode value="60011"/>
+        <postalCode value="60012"/>
+        <postalCode value="60013"/>
+        <postalCode value="60014"/>
+        <postalCode value="60015"/>
+        <postalCode value="60016"/>
+        <postalCode value="60017"/>
+        <postalCode value="60018"/>
+        <postalCode value="60019"/>
+        <postalCode value="64010"/>
+        <postalCode value="64011"/>
+        <postalCode value="64012"/>
+        <postalCode value="64013"/>
+        <postalCode value="64014"/>
+        <postalCode value="64015"/>
+        <postalCode value="64016"/>
+        <postalCode value="64017"/>
+        <postalCode value="64018"/>
+        <postalCode value="64019"/>
+        <postalCode value="20001"/>
+        <postalCode value="20042"/>
+        <postalCode value="20799"/>
+        <postalCode value="19701"/>
+        <postalCode value="32004"/>
+        <postalCode value="30001"/>
+        <postalCode value="39901"/>
+        <postalCode value="96701"/>
+        <postalCode value="50001"/>
+        <postalCode value="68119"/>
+        <postalCode value="83201"/>
+        <postalCode value="60001"/>
+        <postalCode value="46001"/>
+        <postalCode value="66002"/>
+        <postalCode value="40003"/>
+        <postalCode value="70001"/>
+        <postalCode value="71234"/>
+        <postalCode value="10010"/>
+        <postalCode value="10011"/>
+        <postalCode value="10012"/>
+        <postalCode value="10013"/>
+        <postalCode value="10014"/>
+        <postalCode value="10015"/>
+        <postalCode value="10016"/>
+        <postalCode value="10017"/>
+        <postalCode value="10018"/>
+        <postalCode value="10019"/>
+        <postalCode value="55010"/>
+        <postalCode value="55011"/>
+        <postalCode value="55012"/>
+        <postalCode value="55013"/>
+        <postalCode value="55014"/>
+        <postalCode value="55015"/>
+        <postalCode value="55016"/>
+        <postalCode value="55017"/>
+        <postalCode value="55018"/>
+        <postalCode value="55019"/>
+        <postalCode value="20331"/>
+        <postalCode value="20335"/>
+        <postalCode value="20812"/>
+        <postalCode value="39010"/>
+        <postalCode value="39011"/>
+        <postalCode value="39012"/>
+        <postalCode value="39013"/>
+        <postalCode value="39014"/>
+        <postalCode value="39015"/>
+        <postalCode value="39016"/>
+        <postalCode value="39017"/>
+        <postalCode value="39018"/>
+        <postalCode value="39019"/>
+        <postalCode value="48001"/>
+        <postalCode value="55001"/>
+        <postalCode value="63001"/>
+        <postalCode value="38601"/>
+        <postalCode value="71233"/>
+        <postalCode value="59001"/>
+        <postalCode value="27006"/>
+    </location>
+    <agent value="Epic"/>
+    <agent value="Pabau"/>
+    <agent value="EHR Your Way"/>
+    <agent value="Nextech EHR"/>
+    <agent value="Foothold"/>
+    <agent value="Centricity"/>
+    <agent value="TherapyNotes"/>
+    <agent value="WebPT"/>
+    <agent value="Raintree"/>
+    <entity value="?????????"/>
+    <whenCollected>
+        <dateTime value="2021-11-12T21:44:04"/>
+    </whenCollected>
+    <generationMethod>
+        <value value="Feeds"/>
+        <value value="Syndication"/>
+        <value value="Data mining"/>
+        <value value="User generated"/>
+        <value value="Primary user source (survey, interview)"/>        
+        <value value="Visit audio transcriptions"/>
+    </generationMethod>
+    <consentFramework>
+        <value value="General opt-in"/>
+        <value value="Specific-purpose"/>
+        <value value="Third-party sharing"/>
+        <value value="Sensitive data"/>
+        <value value="Automated decision making"/>
+    </consentFramework>
+</metadata>

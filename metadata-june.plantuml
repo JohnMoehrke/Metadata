@@ -1,24 +1,24 @@
 @startuml 
-title June Data Provenance
+
+title Data Provenance
 
 abstract class Metadata {
-  agent : String[0..*] <<User, Organization, Software>> The user or organizaion sending you or captured this data.
-  entity : Entity[0..*] - used when thisData are derived or transformed from predicate data
-  location : String[0..*] - local where data was captured, usually zip or country code
-  whenCollected : dateTime|period[0..*] - when was the data captured
-  howCollected : String[0..*] - <<Web Scraping, Feeds, Syndication, Data Mining, Machine Generated/MLOps, Sensor/IoT, Social Media, Crowdsourcing, User Generated>>
-  consentFramework : String[0..*] <<General opt in, specific purpose, Communication Channel, third-party data sharing, Cookie, Sensitive Data, Automated decision making.>>
-  privacyRights : String[0..*] <<right to be informed, right to access, right to object, right to restrict processing, right to erasure or blocking, right to rectification, right to data portability, right to file a complaint, right to damages>>
-  biasEthics : String[0..*] - Bias and Ethical considerations
-  intellectualProperty : String[0..*] - <<copyrigth, trademark, patent, trade secret, industrial design rights, geographical indications, license>>
-  usage : String[0..*] - usage other than consent rights
+  agent : String[0..*] - **W3C** The Agent is something or someone who takes action in the creation of the data. \n\tThe organization, software, system sending or capturing the data 
+  entity : Entity[0..*] - **W3C** The Entity is something that is manipulated by the Agent in the creation of the data. \n\tCaptures lineage when data are derived or transformed
+  location : String[0..*] - **W3C** Location where data was captured, usually GPS, zip or country code
+  whenCollected : dateTime|period[0..*] - **W3C** when was the data captured, sourced, or manipulated
+  generationMethod : String[0..*] - **W3C** How the data was sourced e.g., web scrapings, user-generated \n\tcontent or manipulated e.g., converted, combined, cleaned
+  consentFramework : String[0..*] - Consent methods applied to data and implies processing options
+  biasEthics : String[0..*] - Data characteristics that inform bias and ethics; could include anonymization or obfuscation
+  intellectualProperty : String[0..*] - Licenses, patents, rights to use the data and work generated using the data 
+  usage : String[0..*] -  Indicates data usage purpose or limitations, other than consent and intellectual property rights
 }
 Metadata *-down- Entity 
 Metadata -left-> Data
 
 abstract class Entity {
     howUsed : String[1..1] <<revision, quotation, source, removal>>
-    what : Reference[1..*] <<Any>>
+    what : Reference[1..1] <<Any>>
 }
 
 @enduml
