@@ -1,0 +1,143 @@
+,,,Note: Standards and metadata highlighted in blue are optional and not a core set of the data standards.,,Note: Values highlighted in yellow are open fields without predefined values.
+Standard,"Mandatory 
+(at standards level)",Single/Multiple values allowed,What is this standards?,Metadata,Values
+Provenance metadata unique ID,Yes,Single,A unique label identifying the provenance metadata of the current dataset,Generated ID,Fill in the blank:
+Lineage,No,Multiple,Identifiers or pointers of metadata representing the data which comprise the current dataset,Universal Provenance Metadata Unique Identifier ,Fill in the blank:
+,,,,Blockchain ledger ID,Fill in the blank:
+,,,,Other: ,Other: 
+Source,Yes,Single,"Identifies the origin (person, organization, system, device, etc.) of the current dataset",Username,Fill in the blank or List pulled from organization's authentication mechanism
+,,,,Organization name,Fill in the blank:
+,,,,Software/system name,Fill in the blank:
+,,,,Machine name,Fill in the blank:
+,,,,Sensor/IoT device name,Fill in the blank:
+,,,,File name,Fill in the blank:
+,,,,IP Address,Fill in the blank:
+,,,,Other: ,Other: 
+Legal rights,No,Multiple,"Identifies the legal or regulatory framework applicable to the current dataset, along with the required data attributions, associated copyright or trademark, and localization and processing requirements",Attribution rights,Fill in the blank: (name or organization)
+,,,,Copyrights or trademarks,Fill in the blank: (name or organization)
+,,,,Required data storage or processing geolocation,Fill in the blank: List of countries
+,,,,Applicable laws and regulations,Children’s Online Privacy Protection Act (COPPA)
+,,,,,Argentina: Personal Data Protection Act (PDPA)
+,,,,,Bahrain: Personal Data Protection Law (PDPL)
+,,,,,Brazil: Lei Geral de Proteção de Dados Pessoais (LGPD)
+,,,,,California Consumer Privacy Act (CCPA)
+,,,,,California Online Privacy Protection Act of 2003 (CalOPPA)
+,,,,,Canada: Personal Information Protection and Electronic Documents Act (PIPEDA)
+,,,,,China Next Generation Artificial Intelligence Development Plan
+,,,,,China: Shanghai Regulations on Promoting the Development of the AI Industry
+,,,,,Colorado Privacy Act (ColoPA)
+,,,,,Connecticut Data Privacy Act (CDPA)
+,,,,,European Union: General Data Protection Regulation (GDPR)
+,,,,,Gramm-Leach-Bliley Act (GLBA)
+,,,,,Health Insurance Portability and Accountability Act (HIPAA)
+,,,,,Israel: Privacy Protection (Data Security) Regulations
+,,,,,Japan: Act on the Protection of Personal Information (APPI)
+,,,,,Kenya: Data Protection Act
+,,,,,"Mauritius: Data Protection Act, 2017 (DPA)"
+,,,,,New Zealand: Privacy Act 2020
+,,,,,Nigeria Data Protection Regulation (NDPR)
+,,,,,Qatar: Law No. 13 of 2016
+,,,,,South Africa: Protection of Personal Information Act (POPIA)
+,,,,,South Korea: Personal Information Protection Act (PIPA)
+,,,,,Turkey: Law on Protection of Personal Data No. 6698
+,,,,,"Uganda: Data Protection and Privacy Act, 2019"
+,,,,,Uruguay: Data Protection Act
+,,,,,Utah Consumer Privacy Act (UCPA)
+,,,,,Virginia Consumer Data Protection Act (VCDPA)
+,,,,,Other:
+Privacy & protection,No,Multiple,Identifies any types of sensitive data associated with the current dataset and any privacy enhancing techniques applied,Protected data classification,Protected Health Information (PHI)
+,,,,,Personally Identifiable Information (PII)
+,,,,,Health Insurance Portability and Accountability Act (HIPAA)
+,,,,,Personal Financial Information 
+,,,,Applied privacy enhancing techniques,Data generation (synthetic)
+,,,,,Data anonymization
+,,,,,Data transformation (homomorphic encryption)
+,,,,,Other:
+Generation date,Yes,Single,Timestamp marking the creation of the current dataset,yyyy-MM-dd'T'HH:mm:ss,ISO8601 date stamp: yyyy-MM-dd'T'HH:mm:ss
+Data type,Yes,Multiple,"Identifies the data type contained in the current set, and provides insights into how the data is organized, its potential use cases, and the challenges associated with handling and using it",Structured,XML
+,,,,,CSV
+,,,,,Databases (SQL/Oracle)
+,,,,,Other: 
+,,,,Unstructured,"Documents (docx, pdf)"
+,,,,,"Images (jpeg, gif)"
+,,,,,"Speech/Audio/Video (wav, mp3, wmv)"
+,,,,,3D Signals
+,,,,,Web pages (html)
+,,,,,"Communications (live chat, messaging and web meetings)"
+,,,,,Survey responses (txt)
+,,,,,Other: 
+Generation method,Yes,Multiple,"Identifies how the data was produced (data mining, machine-generated, IoT sensors, etc.)",Web scraping/Crawling,Textual
+,,,,,Structured
+,,,,,Metadata
+,,,,,Social media
+,,,,,News & articles
+,,,,,Other: 
+,,,,Feeds,RSS source
+,,,,,API source
+,,,,,Real time database info
+,,,,,Interval timed database info
+,,,,,File feed info
+,,,,,Other: 
+,,,,Syndication,News feeds
+,,,,,Financial feeds
+,,,,,Social media
+,,,,,Product/service catalog
+,,,,,Other: 
+,,,,Data mining,Association rule
+,,,,,Classification
+,,,,,Clustering
+,,,,,Regression
+,,,,,Anomaly detection
+,,,,,Sequencing
+,,,,,Other: 
+,,,,Machine generated/MLOps,Synthetic
+,,,,,Generative
+,,,,,Twin
+,,,,,Machine-2-machine (M2M)
+,,,,,AI inferred
+,,,,,"XR (AR, VR, MR)"
+,,,,,Other: 
+,,,,Sensor and IoT output,Environmental
+,,,,,Motion & location
+,,,,,Health 
+,,,,,Biometric
+,,,,,Energy consumption
+,,,,,Industrial sensor
+,,,,,Vehicle & transportation
+,,,,,Security & surveillance
+,,,,,Agriculture & environment
+,,,,,Other: 
+,,,,Social media,Text based
+,,,,,Multimedia
+,,,,,Reviews and ratings
+,,,,,Updates
+,,,,,Q&As
+,,,,,Collaborative
+,,,,,Creative
+,,,,,Other: 
+,,,,User generated content,Clickstream
+,,,,,Social media
+,,,,,Behavior
+,,,,,Ratings & reviews
+,,,,,Multimedia
+,,,,,Textual/Survey
+,,,,,Other: 
+,,,,Primary user source,Survey
+,,,,,Interview
+,,,,,Event
+,,,,,Other: 
+Intended use & restrictions,No,Multiple,Identifies the intended use of the data and which downstream audiences should not be allowed access to the current dataset,Intended use,Machine learning (ML)
+,,,,,Natural Language Processing (NLP)
+,,,,,Expert systems
+,,,,,Vision
+,,,,,Speech
+,,,,,Planning
+,,,,,Robotics
+,,,,,Other: 
+,,,,Restricted audience,Federal government
+,,,,,State government
+,,,,,Local government
+,,,,,Not-for-profit/charities
+,,,,,Academia/Research
+,,,,,Commercial/business
+,,,,,Other: 
