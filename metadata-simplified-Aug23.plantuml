@@ -4,6 +4,7 @@ title Data Provenance - August 2023
 entity Data
 
 abstract class Metadata {
+    identifier : String[1..1] - A unique label identifying the provenance metadata of the current dataset
     lineage : WhereFrom[0..*] - Identifiers of pointers of metadata representing the data which comprise the current dataset
     source : Source[1..1] Identifies the origin (person, organization, system, device, etc) of the current dataset
     legalRights : LegalRights[0..*] - Identifies the legal or regulatory framework applicable to the current dataset, along with the required data attributions, associated copyright or trademark, and localization and processing requirements
