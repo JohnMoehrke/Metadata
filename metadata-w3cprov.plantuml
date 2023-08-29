@@ -10,7 +10,7 @@ package Metadata <<Frame>>{
 abstract class Agent {
     person, organization, software, device
     --
-    id : String1..1 - used to link
+    id : String[1..1] - used to link
     label : String[0..*] - what is the agent
     location : String[0..*] - location of the agent
     type : String[0..*] - what kind of agent
