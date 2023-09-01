@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./metadata-value-lawsAndOtherLawsWithWrapper.xsd">
+	<identifier value="275c3527-214d-4436-9a4b-8aeedfea52ed" />
+	<source>
+		<organizationName value="Hello World" />
+	</source>
+    <legalRights>
+        <laws>
+            <law value="CHILDRENS_ONLINE_PRIVACY_PROTECTION_ACT_COPPA"/>
+        </laws>
+        <laws>
+            <law value="ARGENTINA_PERSONAL_DATA_PROTECTION_ACT_PDPA"/>
+        </laws>
+        <laws>
+            <otherLaw value="Some other 1"/>
+        </laws>
+        <laws>
+            <otherLaw value="Some other 2"/>
+        </laws>
+        <laws>
+            <otherLaw value="Some other 3"/>
+        </laws>
+        <laws>
+            <otherLaw value="Some other 4"/>
+        </laws>
+    </legalRights>
+	<generationDate value="2022-01-01T00:00:01" />
+	<dataType>
+		<structuredMediaType value="xml" />
+	</dataType>
+	<generationMethod>
+		<syndication value="NEWSFEED" />
+	</generationMethod>
+</Metadata>
