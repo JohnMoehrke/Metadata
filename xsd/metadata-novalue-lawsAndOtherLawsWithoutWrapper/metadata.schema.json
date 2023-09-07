@@ -1,0 +1,288 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome5",
+    "definitions": {
+        "Welcome5": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "schema": {
+                    "$ref": "#/definitions/Schema"
+                }
+            },
+            "required": [
+                "schema"
+            ],
+            "title": "Welcome5"
+        },
+        "Schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "simpleType": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/SimpleType"
+                    }
+                },
+                "element": {
+                    "$ref": "#/definitions/SchemaElement"
+                },
+                "complexType": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ComplexTypeElement"
+                    }
+                },
+                "_xmlns:xs": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "http"
+                    ]
+                },
+                "_elementFormDefault": {
+                    "type": "string"
+                },
+                "__prefix": {
+                    "$ref": "#/definitions/Prefix"
+                }
+            },
+            "required": [
+                "__prefix",
+                "_elementFormDefault",
+                "_xmlns:xs",
+                "complexType",
+                "element",
+                "simpleType"
+            ],
+            "title": "Schema"
+        },
+        "ComplexTypeElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sequence": {
+                    "$ref": "#/definitions/Sequence"
+                },
+                "_name": {
+                    "type": "string"
+                },
+                "__prefix": {
+                    "$ref": "#/definitions/Prefix"
+                }
+            },
+            "required": [
+                "__prefix",
+                "_name",
+                "sequence"
+            ],
+            "title": "ComplexTypeElement"
+        },
+        "Sequence": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "element": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ElementElement"
+                    }
+                },
+                "__prefix": {
+                    "$ref": "#/definitions/Prefix"
+                }
+            },
+            "required": [
+                "__prefix",
+                "element"
+            ],
+            "title": "Sequence"
+        },
+        "ElementElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_name": {
+                    "type": "string"
+                },
+                "_type": {
+                    "type": "string"
+                },
+                "_minOccurs": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "_maxOccurs": {
+                    "type": "string"
+                },
+                "__prefix": {
+                    "$ref": "#/definitions/Prefix"
+                }
+            },
+            "required": [
+                "__prefix",
+                "_maxOccurs",
+                "_minOccurs",
+                "_name",
+                "_type"
+            ],
+            "title": "ElementElement"
+        },
+        "SchemaElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "complexType": {
+                    "$ref": "#/definitions/ElementComplexType"
+                },
+                "_name": {
+                    "type": "string"
+                },
+                "__prefix": {
+                    "$ref": "#/definitions/Prefix"
+                }
+            },
+            "required": [
+                "__prefix",
+                "_name",
+                "complexType"
+            ],
+            "title": "SchemaElement"
+        },
+        "ElementComplexType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sequence": {
+                    "$ref": "#/definitions/Sequence"
+                },
+                "__prefix": {
+                    "$ref": "#/definitions/Prefix"
+                }
+            },
+            "required": [
+                "__prefix",
+                "sequence"
+            ],
+            "title": "ElementComplexType"
+        },
+        "SimpleType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "restriction": {
+                    "$ref": "#/definitions/Restriction"
+                },
+                "_name": {
+                    "type": "string"
+                },
+                "__prefix": {
+                    "$ref": "#/definitions/Prefix"
+                }
+            },
+            "required": [
+                "__prefix",
+                "_name",
+                "restriction"
+            ],
+            "title": "SimpleType"
+        },
+        "Restriction": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_base": {
+                    "$ref": "#/definitions/Base"
+                },
+                "__prefix": {
+                    "$ref": "#/definitions/Prefix"
+                },
+                "annotation": {
+                    "$ref": "#/definitions/Annotation"
+                },
+                "enumeration": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Enumeration"
+                    }
+                }
+            },
+            "required": [
+                "__prefix",
+                "_base"
+            ],
+            "title": "Restriction"
+        },
+        "Annotation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "documentation": {
+                    "$ref": "#/definitions/Documentation"
+                },
+                "__prefix": {
+                    "$ref": "#/definitions/Prefix"
+                }
+            },
+            "required": [
+                "__prefix",
+                "documentation"
+            ],
+            "title": "Annotation"
+        },
+        "Documentation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "__prefix": {
+                    "$ref": "#/definitions/Prefix"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__prefix",
+                "__text"
+            ],
+            "title": "Documentation"
+        },
+        "Enumeration": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "annotation": {
+                    "$ref": "#/definitions/Annotation"
+                },
+                "_value": {
+                    "type": "string"
+                },
+                "__prefix": {
+                    "$ref": "#/definitions/Prefix"
+                }
+            },
+            "required": [
+                "__prefix",
+                "_value",
+                "annotation"
+            ],
+            "title": "Enumeration"
+        },
+        "Prefix": {
+            "type": "string",
+            "enum": [
+                "xs"
+            ],
+            "title": "Prefix"
+        },
+        "Base": {
+            "type": "string",
+            "enum": [
+                "xs:string",
+                "xs:dateTime"
+            ],
+            "title": "Base"
+        }
+    }
+}
