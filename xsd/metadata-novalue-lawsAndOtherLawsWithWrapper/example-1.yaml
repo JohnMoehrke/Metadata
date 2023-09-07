@@ -1,0 +1,17 @@
+Metadata:
+  identifier: 275c3527-214d-4436-9a4b-8aeedfea52ed
+  source:
+    organizationName: Hello World
+  legalRights:
+    laws:
+      - law: CHILDRENS_ONLINE_PRIVACY_PROTECTION_ACT_COPPA
+      - law: ARGENTINA_PERSONAL_DATA_PROTECTION_ACT_PDPA
+      - otherLaw: Some other 1
+      - otherLaw: Some other 2
+      - otherLaw: Some other 3
+      - otherLaw: Some other 4
+  generationDate: '2022-01-01T00:00:01'
+  dataType:
+    structuredMediaType: xml
+  generationMethod:
+    syndication: NEWSFEED

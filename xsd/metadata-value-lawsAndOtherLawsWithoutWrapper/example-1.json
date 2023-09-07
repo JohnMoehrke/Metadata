@@ -1,0 +1,51 @@
+{
+	"Metadata": {
+		"identifier": {
+			"_value": "275c3527-214d-4436-9a4b-8aeedfea52ed"
+		},
+		"source": {
+			"organizationName": {
+				"_value": "Hello World"
+			}
+		},
+		"legalRights": {
+			"laws": [
+				{
+					"_value": "CHILDRENS_ONLINE_PRIVACY_PROTECTION_ACT_COPPA"
+				},
+				{
+					"_value": "ARGENTINA_PERSONAL_DATA_PROTECTION_ACT_PDPA"
+				}
+			],
+			"otherLaws": [
+				{
+					"_value": "Some other 1"
+				},
+				{
+					"_value": "Some other 2"
+				},
+				{
+					"_value": "Some other 3"
+				},
+				{
+					"_value": "Some other 4"
+				}
+			]
+		},
+		"generationDate": {
+			"_value": "2022-01-01T00:00:01"
+		},
+		"dataType": {
+			"structuredMediaType": {
+				"_value": "xml"
+			}
+		},
+		"generationMethod": {
+			"syndication": {
+				"_value": "NEWSFEED"
+			}
+		},
+		"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+		"_xsi:noNamespaceSchemaLocation": "./metadata-value-lawsAndOtherLawsWithoutWrapper.xsd"
+	}
+}
