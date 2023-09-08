@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<Metadata xsi:noNamespaceSchemaLocation="schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <identifier value="string" />
+  <lineage>
+    <uniqueId value="string" />
+    <blockId />
+    <otherId />
+  </lineage>
+  <source>
+    <userName />
+    <organizationName />
+    <software value="string" />
+    <system />
+    <machine />
+    <sensor />
+    <file value="string" />
+    <ip />
+    <other value="string" />
+  </source>
+  <legalRights>
+    <attributionRights value="string" />
+    <ipRights value="string" />
+    <locationRestriction value="string" />
+    <laws />
+    <laws value="URUGUAY_DATA_PROTECTION_ACT" />
+    <otherLaws />
+    <otherLaws />
+  </legalRights>
+  <legalRights>
+    <attributionRights />
+    <ipRights value="string" />
+    <locationRestriction value="string" />
+    <laws />
+    <laws />
+    <laws value="SOUTH_AFRICA_PROTECTION_OF_PERSONAL_INFORMATION_ACT_POPIA" />
+    <laws />
+    <laws />
+    <otherLaws value="string" />
+    <otherLaws />
+    <otherLaws />
+    <otherLaws value="string" />
+    <otherLaws />
+  </legalRights>
+  <legalRights>
+    <attributionRights />
+    <ipRights />
+    <locationRestriction value="string" />
+    <laws />
+    <laws />
+    <laws />
+    <laws value="ARGENTINA_PERSONAL_DATA_PROTECTION_ACT_PDPA" />
+    <otherLaws value="string" />
+  </legalRights>
+  <privacyProtection>
+    <protectedDataClassification value="PROTECTED_HEALTH_INFORMATION_PHI" />
+    <appliedPrivacy />
+    <otherPrivacy />
+  </privacyProtection>
+  <privacyProtection>
+    <protectedDataClassification value="PERSONAL_FINANCIAL_INFORMATION" />
+    <appliedPrivacy />
+    <otherPrivacy />
+  </privacyProtection>
+  <privacyProtection>
+    <protectedDataClassification />
+    <appliedPrivacy />
+    <otherPrivacy />
+  </privacyProtection>
+  <privacyProtection>
+    <protectedDataClassification />
+    <appliedPrivacy />
+    <otherPrivacy />
+  </privacyProtection>
+  <generationDate value="2005-10-07T21:16:34.88" />
+  <dataType>
+    <structuredMediaType />
+    <structuredOther value="string" />
+    <unStructuredMediaType />
+    <unStructuredOther />
+  </dataType>
+  <dataType>
+    <structuredMediaType />
+    <structuredOther />
+    <unStructuredMediaType value="string" />
+    <unStructuredOther />
+  </dataType>
+  <dataType>
+    <structuredMediaType value="string" />
+    <structuredOther value="string" />
+    <unStructuredMediaType />
+    <unStructuredOther />
+  </dataType>
+  <generationMethod>
+    <web />
+    <feeds value="REALTIMEDATABASEINFO" />
+    <syndication value="NEWSFEED" />
+    <dataMining value="CLUSTERING" />
+    <machineGenerated />
+    <sensor value="HEALTH" />
+    <socialMedia />
+    <userGenerated value="BEHAVIOR" />
+    <primaryUserSourced value="SURVEY" />
+    <other />
+  </generationMethod>
+  <intendedUseAndRestrictions>
+    <intendedUse />
+    <otherIntendedUse value="string" />
+    <restrictedAudience value="NOT_FOR_PROFIT_CHARITIES" />
+    <otherRestrictedAudience value="string" />
+  </intendedUseAndRestrictions>
+  <intendedUseAndRestrictions>
+    <intendedUse value="PLANNING" />
+    <otherIntendedUse />
+    <restrictedAudience value="ACADEMIA_RESEARCH" />
+    <otherRestrictedAudience />
+  </intendedUseAndRestrictions>
+  <intendedUseAndRestrictions>
+    <intendedUse />
+    <otherIntendedUse value="string" />
+    <restrictedAudience />
+    <otherRestrictedAudience value="string" />
+  </intendedUseAndRestrictions>
+  <intendedUseAndRestrictions>
+    <intendedUse />
+    <otherIntendedUse value="string" />
+    <restrictedAudience value="NOT_FOR_PROFIT_CHARITIES" />
+    <otherRestrictedAudience />
+  </intendedUseAndRestrictions>
+</Metadata>

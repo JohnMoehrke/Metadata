@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="StringValue">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    
+    <xs:simpleType name="DateTime">
+        <xs:restriction base="xs:dateTime" />
+    </xs:simpleType>
+
+    <xs:simpleType name="MediaType">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:complexType name="Metadata">
+        <xs:sequence>
+            <xs:element name="identifier" type="StringValue" minOccurs="1" maxOccurs="1" />
+            <xs:element name="lineage" type="WhereFrom" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="source" type="Source" minOccurs="1" maxOccurs="1" />
+            <xs:element name="legalRights" type="LegalRights" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="privacyProtection" type="PrivacyProtection" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="generationData" type="DateTime" minOccurs="1" maxOccurs="1" />
+            <xs:element name="dataType" type="DataType" minOccurs="1" maxOccurs="unbounded" />
+            <xs:element name="generationMethod" type="GenerationMethod" minOccurs="1" maxOccurs="unbounded" />
+            <xs:element name="intendedUseAndRestrictions" type="UseAndRestrictions" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="WhereFrom">
+        <xs:sequence>
+            <xs:element name="uniqueId" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="blockId" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="otherId" type="StringValue" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Source">
+        <xs:sequence>
+            <xs:element name="userName" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="organizationName" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="software" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="system" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="machine" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="sensor" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="file" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="ip" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="other" type="StringValue" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LegalRights">
+        <xs:sequence>
+            <xs:element name="attributionRights" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="ipRights" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="locationRestriction" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="laws" type="LawsAndRegulations" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PrivacyProtection">
+        <xs:sequence>
+            <xs:element name="protectedDataClassification" type="ProtectedDataClassification" minOccurs="0" maxOccurs="1" />
+            <xs:element name="appliedPrivacy" type="AppliedPrivacy" minOccurs="0" maxOccurs="1" />
+            <xs:element name="otherPrivacy" type="StringValue" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DataType">
+        <xs:sequence>
+            <xs:element name="structuredMediaType" type="MediaType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="structuredOther" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="unStructuredMediaType" type="MediaType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="unStructuredOther" type="StringValue" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="GenerationMethod">
+        <xs:sequence>
+            <xs:element name="web" type="Web" minOccurs="0" maxOccurs="1" />
+            <xs:element name="feeds" type="Feeds" minOccurs="0" maxOccurs="1" />
+            <xs:element name="syndication" type="Syndication" minOccurs="0" maxOccurs="1" />
+            <xs:element name="dataMining" type="DataMining" minOccurs="0" maxOccurs="1" />
+            <xs:element name="machineGenerated" type="MachineGenerated" minOccurs="0" maxOccurs="1" />
+            <xs:element name="sensor" type="Sensor" minOccurs="0" maxOccurs="1" />
+            <xs:element name="socialMedia" type="SocialMedia" minOccurs="0" maxOccurs="1" />
+            <xs:element name="userGenerated" type="UserGenerated" minOccurs="0" maxOccurs="1" />
+            <xs:element name="primaryUserSourced" type="PrimaryUserSourced" minOccurs="0" maxOccurs="1" />
+            <xs:element name="other" type="StringValue" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="UseAndRestrictions">
+        <xs:sequence>
+            <xs:element name="intendedUse" type="IntendedUse" minOccurs="0" maxOccurs="1" />
+            <xs:element name="otherIntendedUse" type="StringValue" minOccurs="0" maxOccurs="1" />
+            <xs:element name="restrictedAudience" type="RestrictedAudience" minOccurs="0" maxOccurs="1" />
+            <xs:element name="otherRestrictedAudience" type="StringValue" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="LawsAndRegulations">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CHILDRENS_ONLINE_PRIVACY_PROTECTION_ACT_COPPA"/>
+            <xs:enumeration value="ARGENTINA_PERSONAL_DATA_PROTECTION_ACT_PDPA"/>
+            <xs:enumeration value="BAHRAIN_PERSONAL_DATA_PROTECTION_LAW_PDPL"/>
+            <xs:enumeration value="BRAZIL_LEI_GERAL_DE_PROTECAO_DE_DADOS_PESSOAIS_LGPD"/>
+            <xs:enumeration value="CALIFORNIA_CONSUMER_PRIVACY_ACT_CCPA"/>
+            <xs:enumeration value="CALIFORNIA_ONLINE_PRIVACY_PROTECTION_ACT_OF_2003_CALOPPA"/>
+            <xs:enumeration value="CANADA_PERSONAL_INFORMATION_PROTECTION_AND_ELECTRONIC_DOCUMENTS_ACT_PIPEDA"/>
+            <xs:enumeration value="CHINA_NEXT_GENERATION_ARTIFICIAL_INTELLIGENCE_DEVELOPMENT_PLAN"/>
+            <xs:enumeration value="CHINA_SHANGHAI_REGULATIONS_ON_PROMOTING_THE_DEVELOPMENT_OF_THE_AI_INDUSTRY"/>
+            <xs:enumeration value="COLORADO_PRIVACY_ACT_COLOPA"/>
+            <xs:enumeration value="CONNECTICUT_DATA_PRIVACY_ACT_CDPA"/>
+            <xs:enumeration value="EUROPEAN_UNION_GENERAL_DATA_PROTECTION_REGULATION_GDPR"/>
+            <xs:enumeration value="GRAMM_LEACH_BLILEY_ACT_GLBA"/>
+            <xs:enumeration value="HEALTH_INSURANCE_PORTABILITY_AND_ACCOUNTABILITY_ACT_HIPAA"/>
+            <xs:enumeration value="ISRAEL_PRIVACY_PROTECTION_DATA_SECURITY_REGULATIONS"/>
+            <xs:enumeration value="JAPAN_ACT_ON_THE_PROTECTION_OF_PERSONAL_INFORMATION_APPI"/>
+            <xs:enumeration value="KENYA_DATA_PROTECTION_ACT"/>
+            <xs:enumeration value="MAURITIUS_DATA_PROTECTION_ACT_2017_DPA"/>
+            <xs:enumeration value="NEW_ZEALAND_PRIVACY_ACT_2020"/>
+            <xs:enumeration value="NIGERIA_DATA_PROTECTION_REGULATION_NDPR"/>
+            <xs:enumeration value="QATAR_LAW_NO_13_OF_2016"/>
+            <xs:enumeration value="SOUTH_AFRICA_PROTECTION_OF_PERSONAL_INFORMATION_ACT_POPIA"/>
+            <xs:enumeration value="SOUTH_KOREA_PERSONAL_INFORMATION_PROTECTION_ACT_PIPA"/>
+            <xs:enumeration value="TURKEY_LAW_ON_PROTECTION_OF_PERSONAL_DATA_NO_6698"/>
+            <xs:enumeration value="UGANDA_DATA_PROTECTION_AND_PRIVACY_ACT_2019"/>
+            <xs:enumeration value="URUGUAY_DATA_PROTECTION_ACT"/>
+            <xs:enumeration value="UTAH_CONSUMER_PRIVACY_ACT_UCPA"/>
+            <xs:enumeration value="VIRGINIA_CONSUMER_DATA_PROTECTION_ACT_VCDPA"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ProtectedDataClassification">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PROTECTED_HEALTH_INFORMATION_PHI"/>
+            <xs:enumeration value="PERSONALLY_IDENTIFIABLE_INFORMATION_PII"/>
+            <xs:enumeration value="HEALTH_INSURANCE_PORTABILITY_AND_ACCOUNTABILITY_ACT_HIPAA"/>
+            <xs:enumeration value="PERSONAL_FINANCIAL_INFORMATION"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AppliedPrivacy">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DATA_GENERATION_SYNTHETIC"/>
+            <xs:enumeration value="DATA_ANONYMIZATION"/>
+            <xs:enumeration value="DATA_TRANSFORMATION_HOMOMORPHIC_ENCRYPTION"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Web">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TEXUAL"/>
+            <xs:enumeration value="STRUCTURED"/>
+            <xs:enumeration value="METADATA"/>
+            <xs:enumeration value="SOCIALMEDIA"/>
+            <xs:enumeration value="NEWS"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Feeds">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="RSS"/>
+            <xs:enumeration value="API"/>
+            <xs:enumeration value="REALTIMEDATABASEINFO"/>
+            <xs:enumeration value="INTERVALTIMEDDATABASEINFO"/>
+            <xs:enumeration value="FILEFEEDINFO"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Syndication">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NEWSFEED"/>
+            <xs:enumeration value="FINANCIALFEED"/>
+            <xs:enumeration value="SOCIALMEDIA"/>
+            <xs:enumeration value="PRODUCTCATALOG"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DataMining">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ASSOCIATION_RULE"/>
+            <xs:enumeration value="CLASSIFICATION"/>
+            <xs:enumeration value="CLUSTERING"/>
+            <xs:enumeration value="REGRESSION"/>
+            <xs:enumeration value="ANOMALY_DETECTION"/>
+            <xs:enumeration value="SEQUENCING"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MachineGenerated">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SYNTHETIC"/>
+            <xs:enumeration value="GENERATIVE"/>
+            <xs:enumeration value="TWIN"/>
+            <xs:enumeration value="MACHINE_2_MACHINE_M2M"/>
+            <xs:enumeration value="AI_INFERRED"/>
+            <xs:enumeration value="XR_ARVRMR"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Sensor">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ENVIRONMENTAL"/>
+            <xs:enumeration value="MOTION_AND_LOCATION"/>
+            <xs:enumeration value="HEALTH"/>
+            <xs:enumeration value="BIOMETRIC"/>
+            <xs:enumeration value="ENERGY_CONSUMPTION"/>
+            <xs:enumeration value="INDUSTRAL_SENSOR"/>
+            <xs:enumeration value="VEHICLE_AND_TRANSPORTATION"/>
+            <xs:enumeration value="SECURITY_AND_SERVEILLANCE"/>
+            <xs:enumeration value="AGRICULTURE_AND_ENVIRONMENT"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SocialMedia">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TEXT_BASED"/>
+            <xs:enumeration value="MULTIMEDIA"/>
+            <xs:enumeration value="REVIEWS_AND_RATINGS"/>
+            <xs:enumeration value="UPDATES"/>
+            <xs:enumeration value="Q_AND_AS"/>
+            <xs:enumeration value="COLLABORATIVE"/>
+            <xs:enumeration value="CREATIVE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="UserGenerated">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CLICKSTREAM"/>
+            <xs:enumeration value="SOCIAL_MEDIA"/>
+            <xs:enumeration value="BEHAVIOR"/>
+            <xs:enumeration value="RATINGS_AND_REVIEWS"/>
+            <xs:enumeration value="MULTIMEDIA"/>
+            <xs:enumeration value="TEXTUAL_SURVEY"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PrimaryUserSourced">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SURVEY"/>
+            <xs:enumeration value="INTERVIEW"/>
+            <xs:enumeration value="EVENT"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="IntendedUse">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MACHINE_LEARNING_ML"/>
+            <xs:enumeration value="NATURAL_LANGUAGE_PROCESSING_NLP"/>
+            <xs:enumeration value="EXPERT_SYSTEMS"/>
+            <xs:enumeration value="VISION"/>
+            <xs:enumeration value="SPEECH"/>
+            <xs:enumeration value="PLANNING"/>
+            <xs:enumeration value="ROBOTICS"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="RestrictedAudience">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="FEDERAL_GOVERNMENT"/>
+            <xs:enumeration value="STATE_GOVERNMENT"/>
+            <xs:enumeration value="LOCAL_GOVERNMENT"/>
+            <xs:enumeration value="NOT_FOR_PROFIT_CHARITIES"/>
+            <xs:enumeration value="ACADEMIA_RESEARCH"/>
+            <xs:enumeration value="COMMERCIAL_BUSINESS"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

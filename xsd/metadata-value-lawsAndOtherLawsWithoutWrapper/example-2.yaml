@@ -1,0 +1,141 @@
+Metadata:
+  identifier:
+    _value: string
+  lineage:
+    uniqueId:
+      _value: string
+    blockId: ''
+    otherId: ''
+  source:
+    userName: ''
+    organizationName: ''
+    software:
+      _value: string
+    system: ''
+    machine: ''
+    sensor: ''
+    file:
+      _value: string
+    ip: ''
+    other:
+      _value: string
+  legalRights:
+    - attributionRights:
+        _value: string
+      ipRights:
+        _value: string
+      locationRestriction:
+        _value: string
+      laws:
+        - ''
+        - _value: URUGUAY_DATA_PROTECTION_ACT
+      otherLaws:
+        - ''
+        - ''
+    - attributionRights: ''
+      ipRights:
+        _value: string
+      locationRestriction:
+        _value: string
+      laws:
+        - ''
+        - ''
+        - _value: SOUTH_AFRICA_PROTECTION_OF_PERSONAL_INFORMATION_ACT_POPIA
+        - ''
+        - ''
+      otherLaws:
+        - _value: string
+        - ''
+        - ''
+        - _value: string
+        - ''
+    - attributionRights: ''
+      ipRights: ''
+      locationRestriction:
+        _value: string
+      laws:
+        - ''
+        - ''
+        - ''
+        - _value: ARGENTINA_PERSONAL_DATA_PROTECTION_ACT_PDPA
+      otherLaws:
+        _value: string
+  privacyProtection:
+    - protectedDataClassification:
+        _value: PROTECTED_HEALTH_INFORMATION_PHI
+      appliedPrivacy: ''
+      otherPrivacy: ''
+    - protectedDataClassification:
+        _value: PERSONAL_FINANCIAL_INFORMATION
+      appliedPrivacy: ''
+      otherPrivacy: ''
+    - protectedDataClassification: ''
+      appliedPrivacy: ''
+      otherPrivacy: ''
+    - protectedDataClassification: ''
+      appliedPrivacy: ''
+      otherPrivacy: ''
+  generationDate:
+    _value: '2005-10-07T21:16:34.88'
+  dataType:
+    - structuredMediaType: ''
+      structuredOther:
+        _value: string
+      unStructuredMediaType: ''
+      unStructuredOther: ''
+    - structuredMediaType: ''
+      structuredOther: ''
+      unStructuredMediaType:
+        _value: string
+      unStructuredOther: ''
+    - structuredMediaType:
+        _value: string
+      structuredOther:
+        _value: string
+      unStructuredMediaType: ''
+      unStructuredOther: ''
+  generationMethod:
+    web: ''
+    feeds:
+      _value: REALTIMEDATABASEINFO
+    syndication:
+      _value: NEWSFEED
+    dataMining:
+      _value: CLUSTERING
+    machineGenerated: ''
+    sensor:
+      _value: HEALTH
+    socialMedia: ''
+    userGenerated:
+      _value: BEHAVIOR
+    primaryUserSourced:
+      _value: SURVEY
+    other: ''
+  intendedUseAndRestrictions:
+    - intendedUse: ''
+      otherIntendedUse:
+        _value: string
+      restrictedAudience:
+        _value: NOT_FOR_PROFIT_CHARITIES
+      otherRestrictedAudience:
+        _value: string
+    - intendedUse:
+        _value: PLANNING
+      otherIntendedUse: ''
+      restrictedAudience:
+        _value: ACADEMIA_RESEARCH
+      otherRestrictedAudience: ''
+    - intendedUse: ''
+      otherIntendedUse:
+        _value: string
+      restrictedAudience: ''
+      otherRestrictedAudience:
+        _value: string
+    - intendedUse: ''
+      otherIntendedUse:
+        _value: string
+      restrictedAudience:
+        _value: NOT_FOR_PROFIT_CHARITIES
+      otherRestrictedAudience: ''
+  '_xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance'
+  '_xsi:noNamespaceSchemaLocation': schema.xsd
